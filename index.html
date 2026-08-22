@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web Technology Experiments</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #222;
+        }
+
+        header {
+            background: #24292f;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin-top: 10px;
+            color: #d0d7de;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .experiments {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .experiment {
+            display: block;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #222;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+            transition: 0.2s;
+        }
+
+        .experiment:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+        }
+
+        .number {
+            display: inline-block;
+            background: #24292f;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            margin-right: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            .experiments {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Web Technology Experiments</h1>
+        <p>Click an experiment to open the website</p>
+    </header>
+
+    <div class="container">
+
+        <div class="experiments">
+
+            <a class="experiment" href="Exp%201/">
+                <span class="number">01</span>
+                Experiment 1
+            </a>
+
+            <a class="experiment" href="Exp%202/">
+                <span class="number">02</span>
+                Experiment 2
+            </a>
+
+            <a class="experiment" href="Exp%203/">
+                <span class="number">03</span>
+                Experiment 3
+            </a>
+
+            <a class="experiment" href="Exp%204/">
+                <span class="number">04</span>
+                Experiment 4
+            </a>
+
+            <a class="experiment" href="Exp%205/">
+                <span class="number">05</span>
+                Experiment 5
+            </a>
+
+            <a class="experiment" href="Exp%206/">
+                <span class="number">06</span>
+                Experiment 6
+            </a>
+
+            <a class="experiment" href="Exp%207/">
+                <span class="number">07</span>
+                Experiment 7
+            </a>
+
+            <a class="experiment" href="Exp%208/">
+                <span class="number">08</span>
+                Experiment 8
+            </a>
+
+            <a class="experiment" href="Exp%209/">
+                <span class="number">09</span>
+                Experiment 9
+            </a>
+
+            <a class="experiment" href="Exp%2010/">
+                <span class="number">10</span>
+                Experiment 10
+            </a>
+
+        </div>
+
+    </div>
+
+    <footer>
+        © 2026 Web Technology Experiments
+    </footer>
+
+</body>
+</html>
