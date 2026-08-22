@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Web Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        background: #f2f2f2;
+    }
+
+    .container {
+        width: 100%;
+        margin: 20px auto;
+        border: 2px solid gray;
+        background: white;
+    }
+
+    /* Header */
+
+    header {
+        height: 180px;
+        background: url("./sunrise-tree-trees-sky-thumb.jpg");
+        background-size: cover;
+        position: relative;
+    }
+
+    .logo {
+        width: 70px;
+        height: 90px;
+        position: absolute;
+    }
+
+    .logo1 {
+        top: 15px;
+        left: 20px;
+    }
+
+    .logo2 {
+        top: 80px;
+        left: 45px;
+    }
+
+    /* Navigation */
+
+    nav {
+        background: #898a53;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+    }
+
+    nav ul li {
+        flex: 1;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        padding: 12px;
+    }
+
+    .active {
+        background: rgb(44, 120, 143);
+    }
+
+    nav ul li:hover {
+        background: #aed425;
+    }
+
+    /* Gallery */
+
+    .gallery {
+        background: rgb(170, 55, 145);
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 220px;
+        overflow: hidden;
+        border-radius: 15px;
+    }
+
+    th {
+        background: rgb(98, 44, 112);
+        color: rgb(0, 0, 0);
+        padding: 10px;
+    }
+
+    td {
+        padding: 10px;
+        background: #7e2e7a;
+        text-align: center;
+    }
+
+    tr:nth-child(even) td {
+        background: rgb(133, 46, 136);
+        color: rgb(2, 0, 0);
+    }
+
+    td img {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Login */
+
+    .login-section {
+        background: url("./sunrise-tree-trees-sky-thumb.jpg");
+        background-size: cover;
+        padding: 40px;
+    }
+
+    .form-box {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .login,
+    .signup {
+        background: white;
+        width: 300px;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .login h2,
+    .signup h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        background: #8c499c;
+        border: none;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background: #76327c;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #763683;
+    }
+
+    /* Footer */
+
+    footer {
+        background: #f7d9ac;
+        padding: 20px;
+    }
+
+    footer h3 {
+        font-style: italic;
+        margin-bottom: 10px;
+    }
+
+    footer p {
+        font-size: 18px;
+        font-style: italic;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <img src="./sky1.jpg" class="logo logo1">
+            <img src="./sky.jpg" class="logo logo2">
+        </header>
+
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Myself</a></li>
+                <li><a href="#">Others</a></li>
+            </ul>
+        </nav>
+
+        <!-- Gallery -->
+        <section class="gallery">
+
+            <table>
+                <tr>
+                    <th colspan="2">Cars</th>
+                </tr>
+
+                <tr>
+                    <td>BMW M5 CS</td>
+                    <td><img src="./bmw.jpg"></td>
+                </tr>
+
+                <tr>
+                    <td>MUSTANG GT</td>
+                    <td><img src="./mustang.jpg"></td>
+                </tr>
+
+                <tr>
+                    <td>POLO TSI</td>
+                    <td><img src="./polo.jpg"></td>
+                </tr>
+
+                <tr>
+                    <td>INNOVA</td>
+                    <td><img src="./inn.jpg"></td>
+                </tr>
+
+            </table>
+
+        </section>
+
+        <!-- Login Area -->
+        <section class="login-section">
+
+            <div class="form-box">
+
+                <div class="login">
+                    <h2>Sign In</h2>
+
+                    <input type="text" placeholder="Username">
+
+                    <input type="password" placeholder="Password">
+
+                    <button>Sign In</button>
+
+                </div>
+
+                <div class="signup">
+
+                    <h2>Sign Up</h2>
+
+                    <input type="text" placeholder="Name">
+
+                    <input type="email" placeholder="Email">
+
+                    <input type="password" placeholder="Password">
+
+                    <button>Sign Up</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer>
+
+            <h3>Your address</h3>
+
+            <p>
+                © 2026-2027. URK24CS1140 - Web Technology Lab Batch 3.
+                All Rights Reserved.
+            </p>
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
