@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+        }
+
+        h1 {}
+
+        .container {
+            width: 95%;
+            margin: 10px auto;
+            background: white;
+            border: 2px solid gray;
+            padding: 10px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .profile {
+            width: 90px;
+            height: 90px;
+            border-radius: 4px;
+        }
+
+        header h1 {
+            flex: 1;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 10px 0;
+        }
+
+        nav input {
+            margin-left: auto;
+            padding: 4px;
+        }
+
+        .left {
+            float: left;
+            width: 25%;
+        }
+
+        .left label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        progress {
+            width: 90%;
+            height: 15px;
+        }
+
+        .right {
+            float: right;
+            width: 70%;
+            text-align: center;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        fieldset {
+            width: 48%;
+            padding: 15px;
+        }
+
+        fieldset input:not([type="radio"]):not([type="checkbox"]),
+        fieldset textarea,
+        fieldset select {
+            width: 100%;
+            margin: 6px 0 12px;
+            padding: 6px;
+        }
+
+        .inline {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        input[type="radio"] {
+            width: auto;
+            margin: 0 5px 0 10px;
+        }
+
+        .form-group {
+            margin: 10px 0;
+        }
+
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        footer {
+            margin-top: 20px;
+            border-top: 1px solid gray;
+            padding-top: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <img src="./images (1).jpg" class="profile">
+
+            <h1 style="text-align: right;"> TAMILZHNIYAN K </h1>
+        </header>
+
+        <hr>
+
+        <nav>
+            <a href="#">Academics</a>
+            <a href="#">Achievements</a>
+            <a href="#">Friends</a>
+
+            <input type="text" placeholder="Search">
+        </nav>
+
+        <hr>
+
+        <div class="left">
+
+            <h3>Skills</h3>
+
+            <label>Photoshop</label>
+            <progress value="90" max="100"></progress>
+
+            <label>Java</label>
+            <progress value="80" max="100"></progress>
+
+            <label>C++</label>
+            <progress value="75" max="100"></progress>
+
+            <label>PHP</label>
+            <progress value="70" max="100"></progress>
+
+            <label>JavaScript</label>
+            <progress value="60" max="100"></progress>
+
+        </div>
+
+        <div class="right">
+
+            <video width="400" height="250" controls>
+                <source src="./car.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="form-container">
+
+            <fieldset>
+
+                <legend>Personal Information</legend>
+
+                Username:
+                <input type="text" placeholder="Enter username">
+
+                Password:
+                <input type="password">
+
+                Reg No:
+                <input type="text">
+
+                Age:
+                <input type="number">
+
+                <div class="form-group">
+                    <label>Gender:</label><br><br>
+
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male" class="inline">Male</label>
+
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female" class="inline">Female</label>
+                </div>
+                DOB:
+                <input type="date">
+
+                Favorite Color:
+                <input type="color">
+
+                Change profile Photo:
+                <input type="file">
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Contact Information</legend>
+
+                Address:
+                <textarea rows="3"></textarea>
+
+                State:
+                <select>
+                    <option>Select</option>
+                    <option>Tamil Nadu</option>
+                    <option>Kerala</option>
+                    <option>Karnataka</option>
+                </select>
+
+                Zipcode:
+                <input type="text">
+
+                Mobile:
+                <input type="tel">
+
+                Email:
+                <input type="email">
+
+                URL:
+                <input type="url">
+
+                <br>
+
+                <input type="checkbox"> I verified
+
+                <br><br>
+
+                <input type="submit">
+
+            </fieldset>
+
+        </div>
+
+        <br>
+
+        <div class="bottom">
+
+            <iframe src="./Spider.jpg" width="48%" height="300"></iframe>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.3598830116975!2d76.74148607480741!3d10.936163989222518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba866bd6aaaaaab%3A0xc650b8a75e7b51f0!2sKarunya%20Institute%20of%20Technology%20and%20Sciences%20(Deemed%20University)!5e0!3m2!1sen!2sin!4v1785429842583!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+        </div>
+
+        <footer>
+
+            Your address
+            <br>
+            © 2020-2021. (URK24CS1140) - Web Technology Lab Batch 1. All Rights Reserved.
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
