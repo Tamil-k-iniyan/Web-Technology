@@ -2,104 +2,124 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Experiment 6</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #f4f6f8;
             margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f8;
+            color: #111;
         }
 
         header {
             background: #212529;
             color: white;
             text-align: center;
-            padding: 35px;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            margin-top: 15px;
+            font-size: 18px;
         }
 
         .container {
             width: 80%;
+            max-width: 1200px;
             margin: 40px auto;
         }
 
         .experiment {
             background: white;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px #ccc;
-        }
-
-        a {
-            text-decoration: none;
-            color: #111;
-            font-size: 20px;
-            font-weight: bold;
+            margin-bottom: 18px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #ccc;
+            transition: 0.2s;
         }
 
         .experiment:hover {
-            background: #e9ecef;
+            transform: translateY(-3px);
         }
 
+        .experiment a {
+            display: block;
+            padding: 25px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .experiment h2 {
+            margin: 0 0 15px 0;
+            font-size: 22px;
+        }
+
+        .experiment p {
+            margin: 0;
+            font-size: 17px;
+            color: #444;
+        }
     </style>
 
 </head>
 
 <body>
 
-<header>
+    <header>
+        <h1>Experiment 6</h1>
+        <p>JavaScript - Timer Functions and Arrays</p>
+    </header>
 
-    <h1>Experiment 6</h1>
+    <div class="container">
 
-    <p>JavaScript - Timer Functions and Arrays</p>
+        <div class="experiment">
+            <a href="ex1.html">
+                <h2>Experiment 6 - Question 1</h2>
+                <p>Digital Clock</p>
+            </a>
+        </div>
 
-</header>
+        <div class="experiment">
+            <a href="ex2.html">
+                <h2>Experiment 6 - Question 2</h2>
+                <p>Dynamic Background Colour</p>
+            </a>
+        </div>
 
-<div class="container">
+        <div class="experiment">
+            <a href="ex3.html">
+                <h2>Experiment 6 - Question 3</h2>
+                <p>Increase and Decrease Font Size</p>
+            </a>
+        </div>
 
-    <div class="experiment">
-        <a href="ex%201.html">
-            Experiment 6 - Question 1
-        </a>
-        <p>Digital Clock</p>
+        <div class="experiment">
+            <a href="ex4.html">
+                <h2>Experiment 6 - Question 4</h2>
+                <p>Move and Stop Car</p>
+            </a>
+        </div>
+
+        <div class="experiment">
+            <a href="ex5.html">
+                <h2>Experiment 6 - Question 5</h2>
+                <p>Student Array of Objects</p>
+            </a>
+        </div>
+
     </div>
-
-    <div class="experiment">
-        <a href="ex%202.html">
-            Experiment 6 - Question 2
-        </a>
-        <p>Dynamic Background</p>
-    </div>
-
-    <div class="experiment">
-        <a href="ex%203.html">
-            Experiment 6 - Question 3
-        </a>
-        <p>Change Font Size</p>
-    </div>
-
-    <div class="experiment">
-        <a href="ex%204.html">
-            Experiment 6 - Question 4
-        </a>
-        <p>Move and Stop Car</p>
-    </div>
-
-    <div class="experiment">
-        <a href="ex%205.html">
-            Experiment 6 - Question 5
-        </a>
-        <p>Student Array of Objects</p>
-    </div>
-
-</div>
 
 </body>
 
