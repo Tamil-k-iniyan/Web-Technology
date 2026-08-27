@@ -2,23 +2,30 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Experiment 5</title>
 
     <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             background: #f4f6f8;
+            color: #111;
         }
 
         header {
             background: #212529;
             color: white;
             text-align: center;
-            padding: 35px;
+            padding: 35px 20px;
         }
 
         header h1 {
@@ -27,96 +34,157 @@
         }
 
         header p {
+            margin-top: 15px;
             font-size: 18px;
         }
 
         .container {
             width: 80%;
+            max-width: 1200px;
             margin: 40px auto;
         }
 
         .experiment {
             background: white;
-            padding: 25px;
-            margin: 15px 0;
+            margin-bottom: 18px;
             border-radius: 12px;
-            box-shadow: 0 3px 10px #ccc;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+            transition: 0.2s;
         }
 
         .experiment:hover {
-            background: #eeeeee;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
         }
 
         .experiment a {
             display: block;
+            padding: 25px;
             text-decoration: none;
             color: black;
         }
 
         .experiment h2 {
             margin: 0 0 15px 0;
+            font-size: 22px;
         }
 
         .experiment p {
             margin: 0;
-            font-size: 18px;
+            font-size: 17px;
+            color: #444;
         }
+
     </style>
 
 </head>
 
 <body>
 
-<header>
-    <h1>Experiment 5</h1>
-    <p>JavaScript - DOM Elements and Events</p>
-</header>
+    <header>
 
-<div class="container">
+        <h1>Experiment 5</h1>
 
-    <div class="experiment">
-        <a href="./ex%201.html">
-            <h2>Experiment 5 - Question 1</h2>
-            <p>Shortest and Longest Word</p>
-        </a>
+        <p>JavaScript - DOM Elements and Events</p>
+
+    </header>
+
+
+    <div class="container">
+
+
+        <!-- Question 1 -->
+
+        <div class="experiment">
+
+            <a href="./ex%201.html">
+
+                <h2>Experiment 5 - Question 1</h2>
+
+                <p>Shortest and Longest Word</p>
+
+            </a>
+
+        </div>
+
+
+        <!-- Question 2 -->
+
+        <div class="experiment">
+
+            <a href="./ex%202.html">
+
+                <h2>Experiment 5 - Question 2</h2>
+
+                <p>BMI Calculator</p>
+
+            </a>
+
+        </div>
+
+
+        <!-- Question 3 -->
+
+        <div class="experiment">
+
+            <a href="./ex%203.html">
+
+                <h2>Experiment 5 - Question 3</h2>
+
+                <p>Fruit Farm</p>
+
+            </a>
+
+        </div>
+
+
+        <!-- Question 4 -->
+
+        <div class="experiment">
+
+            <a href="./ex%204.html">
+
+                <h2>Experiment 5 - Question 4</h2>
+
+                <p>Currency Converter</p>
+
+            </a>
+
+        </div>
+
+
+        <!-- Question 5 -->
+
+        <div class="experiment">
+
+            <a href="./ex%205.html">
+
+                <h2>Experiment 5 - Question 5</h2>
+
+                <p>Coin Flip</p>
+
+            </a>
+
+        </div>
+
+
+        <!-- Question 6 -->
+
+        <div class="experiment">
+
+            <a href="./ex%206.html">
+
+                <h2>Experiment 5 - Question 6</h2>
+
+                <p>Birthday Cake Order Form</p>
+
+            </a>
+
+        </div>
+
+
     </div>
-
-    <div class="experiment">
-        <a href="./ex%202.html">
-            <h2>Experiment 5 - Question 2</h2>
-            <p>BMI Calculator</p>
-        </a>
-    </div>
-
-    <div class="experiment">
-        <a href="./ex%203.html">
-            <h2>Experiment 5 - Question 3</h2>
-            <p>Fruit Farm</p>
-        </a>
-    </div>
-
-    <div class="experiment">
-        <a href="./ex%204.html">
-            <h2>Experiment 5 - Question 4</h2>
-            <p>Currency Converter</p>
-        </a>
-    </div>
-
-    <div class="experiment">
-        <a href="./ex%205.html">
-            <h2>Experiment 5 - Question 5</h2>
-            <p>Coin Flip</p>
-        </a>
-    </div>
-
-    <div class="experiment">
-        <a href="./ex%206.html">
-            <h2>Experiment 5 - Question 6</h2>
-            <p>Birthday Cake Order Form</p>
-        </a>
-    </div>
-
-</div>
 
 </body>
+
 </html>
