@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Move Car</title>
+</head>
+
+<body>
+
+<h1>Move the Car</h1>
+
+<button onclick="moveRight()">Move</button>
+
+<button onclick="stop()">Stop</button>
+
+<br><br>
+
+<img src="./bmw.jpg" id="img"
+     width="150">
+
+<script>
+
+var imgObj;
+var animate;
+
+function init() {
+
+    imgObj = document.getElementById("img");
+
+    imgObj.style.position = "relative";
+
+    imgObj.style.left = "0px";
+}
+
+function moveRight() {
+
+    imgObj.style.left =
+        parseInt(imgObj.style.left) + 1 + "px";
+
+    animate = setTimeout(moveRight, 10);
+}
+
+function stop() {
+
+    clearTimeout(animate);
+
+}
+
+window.onload = init;
+
+</script>
+
+</body>
+</html>
