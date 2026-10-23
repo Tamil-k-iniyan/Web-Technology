@@ -124,5 +124,22 @@ jobs:
             throw new Error('Published stylesheet does not contain the application styles');
           }
 
+          await new Promise((resolve) => setTimeout(resolve, 30000));
+          const stableAppUrl = new URL(appUrl);
+          stableAppUrl.searchParams.set('_pages_check', Date.now());
+          const stableAppResponse = await fetchPublished(stableAppUrl);
+          const stableAppHtml = await stableAppResponse.text();
+          if (stableAppHtml.includes('/src/main.jsx') || !stableAppHtml.includes(scriptPath)) {
+            throw new Error('The published app was replaced after the Actions deployment');
+          }
+
+          const stableRootUrl = new URL(rootUrl);
+          stableRootUrl.searchParams.set('_pages_check', Date.now());
+          const stableRootResponse = await fetchPublished(stableRootUrl);
+          const stableRootHtml = await stableRootResponse.text();
+          if (!stableRootHtml.includes('href="Exp%2012/FullStackStudentApp/frontend/"')) {
+            throw new Error('The root experiment listing changed after the Actions deployment');
+          }
+
           console.log(`Verified root listing and React bundles at ${appUrl}`);
           NODE
