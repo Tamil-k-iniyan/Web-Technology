@@ -62,3 +62,67 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Verify published experiment listing and app bundles
+        env:
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          node --input-type=module <<'NODE'
+          const pageUrl = process.env.PAGE_URL.endsWith('/')
+            ? process.env.PAGE_URL
+            : `${process.env.PAGE_URL}/`;
+          const rootUrl = new URL(pageUrl);
+          const appUrl = new URL('Exp%2012/FullStackStudentApp/frontend/', rootUrl);
+
+          async function fetchPublished(url) {
+            let lastError;
+            for (let attempt = 0; attempt < 12; attempt += 1) {
+              try {
+                const response = await fetch(url, { cache: 'no-store' });
+                if (response.ok) return response;
+                lastError = new Error(`HTTP ${response.status} for ${url}`);
+              } catch (error) {
+                lastError = error;
+              }
+              await new Promise((resolve) => setTimeout(resolve, 5000));
+            }
+            throw lastError;
+          }
+
+          const rootResponse = await fetchPublished(rootUrl);
+          const rootHtml = await rootResponse.text();
+          for (let number = 1; number <= 11; number += 1) {
+            if (!new RegExp(`Experiment\\s+${number}(?:\\D|$)`).test(rootHtml)) {
+              throw new Error(`Root experiment listing is missing Experiment ${number}`);
+            }
+          }
+          if (!rootHtml.includes('href="Exp%2012/FullStackStudentApp/frontend/"')) {
+            throw new Error('Root Experiment 12 link does not target the deployed app');
+          }
+
+          const appResponse = await fetchPublished(appUrl);
+          const appHtml = await appResponse.text();
+          if (appHtml.includes('/src/main.jsx')) {
+            throw new Error('Pages is serving the raw Vite template instead of its production build');
+          }
+
+          const scriptPath = appHtml.match(/<script[^>]+src="([^"]+\.js)"/)?.[1];
+          const stylePath = appHtml.match(/<link[^>]+rel="stylesheet"[^>]+href="([^"]+\.css)"/)?.[1];
+          if (!scriptPath || !stylePath) {
+            throw new Error('Published app HTML is missing its built JavaScript or CSS bundle');
+          }
+
+          const scriptResponse = await fetchPublished(new URL(scriptPath, appUrl));
+          const script = await scriptResponse.text();
+          if (!script.includes('Student Management System')) {
+            throw new Error('Published JavaScript bundle does not contain the React application');
+          }
+
+          const styleResponse = await fetchPublished(new URL(stylePath, appUrl));
+          const styles = await styleResponse.text();
+          if (!styles.includes('.student-form')) {
+            throw new Error('Published stylesheet does not contain the application styles');
+          }
+
+          console.log(`Verified root listing and React bundles at ${appUrl}`);
+          NODE
