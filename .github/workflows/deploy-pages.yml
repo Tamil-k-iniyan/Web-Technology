@@ -42,6 +42,7 @@ jobs:
           mkdir -p _site
           git archive HEAD | tar -x -C _site
           cp -R "Exp 12/FullStackStudentApp/frontend/dist/." "_site/Exp 12/FullStackStudentApp/frontend/"
+          cp "Exp 12/FullStackStudentApp/frontend/dist/app.html" "_site/Exp 12/FullStackStudentApp/frontend/index.html"
           touch _site/.nojekyll
 
       - name: Configure Pages

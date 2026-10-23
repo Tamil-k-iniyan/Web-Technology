@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
+    "dev": "vite --open /app.html",
+    "build": "vite build && node scripts/publish-pages.mjs",
+    "lint": "eslint src scripts eslint.config.js vite.config.js",
     "preview": "vite preview"
   },
   "dependencies": {
