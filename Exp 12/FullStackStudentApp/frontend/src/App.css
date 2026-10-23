@@ -1,0 +1,109 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f6fb;
+  color: #202938;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 35px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px #00000012;
+}
+
+h1,
+.subtitle {
+  text-align: center;
+}
+
+h1 {
+  color: #1e4f91;
+}
+
+.subtitle {
+  color: #667085;
+  margin-bottom: 28px;
+}
+
+.student-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1 1 180px;
+  min-width: 0;
+  padding: 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  margin: 2px;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.delete-button {
+  background: #dc2626;
+}
+
+.delete-button:hover {
+  background: #b91c1c;
+}
+
+.message {
+  padding: 10px;
+  background: #eef5ff;
+  border-radius: 6px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th,
+td {
+  border: 1px solid #dbe2ea;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background: #e8effb;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
